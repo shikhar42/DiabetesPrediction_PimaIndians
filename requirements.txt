@@ -1,20 +1,35 @@
 # R package requirements for finalproject_code_.R
 # R itself is not pip-installable; this file lists the CRAN packages the
-# script loads, in sessionInfo() style. Install them in R with:
+# script loads, with versions pinned to the current CRAN versions as of
+# November 2026 (checked against the CRAN package index on 2026-11-09).
 #
-#   install.packages(c("dplyr", "caret", "InformationValue", "gmodels",
-#                      "pROC", "class", "ggplot2", "highcharter",
-#                      "corrplot", "C50"))
+# Install the pinned versions in R with remotes::install_version():
+#
+#   install.packages("remotes")
+#   remotes::install_version("dplyr",            version = "1.2.1")
+#   remotes::install_version("caret",            version = "7.0-1")
+#   remotes::install_version("InformationValue", version = "1.2.3")
+#   remotes::install_version("gmodels",          version = "2.19.1")
+#   remotes::install_version("pROC",             version = "1.19.1")
+#   remotes::install_version("class",            version = "7.3-24")
+#   remotes::install_version("ggplot2",          version = "4.0.3")
+#   remotes::install_version("highcharter",      version = "0.9.5")
+#   remotes::install_version("corrplot",         version = "0.95")
+#   remotes::install_version("C50",              version = "0.2.0")
+#
+# NOTE: InformationValue is no longer on current CRAN -- it was archived
+# on 2022-11-20. Version 1.2.3 is the last release; install_version()
+# finds it in the CRAN Archive automatically.
 #
 # Record the exact versions used for a run with sessionInfo() in R.
 
-dplyr
-caret
-InformationValue
-gmodels
-pROC
-class
-ggplot2
-highcharter
-corrplot
-C50
+dplyr==1.2.1
+caret==7.0-1
+InformationValue==1.2.3
+gmodels==2.19.1
+pROC==1.19.1
+class==7.3-24
+ggplot2==4.0.3
+highcharter==0.9.5
+corrplot==0.95
+C50==0.2.0
