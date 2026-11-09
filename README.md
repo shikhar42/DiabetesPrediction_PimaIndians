@@ -46,12 +46,16 @@ Implemented in `finalproject_code_.R`:
 - Sensitivity and specificity are computed in code from the confusion
   counts, for every model.
 - Logistic regression is additionally evaluated with AUC and a 95%
-  confidence interval (`pROC::ci.auc`), and all accuracies should be read
-  against the **majority-class baseline of 65.1%** (predicting "not
-  diabetic" for everyone) that the script prints.
-- A stability check at the end repeats the full pipeline over several
-  seeds (fixed, already-chosen `k` and cutoff — no re-tuning) and reports
-  the mean and standard deviation of the test metrics across splits.
+  confidence interval (`pROC::ci.auc`). For every model, the script
+  computes test accuracy minus the **majority-class baseline** (about
+  65.1% on the full data — predicting "not diabetic" for everyone), so
+  the improvement over the baseline is a printed result, not an eyeball
+  comparison.
+- A stability check at the end repeats the pipeline over several seeds
+  as fully independent replications — each seed makes its own split,
+  learns its own imputation/scaling statistics, and re-tunes its own
+  `k` and cutoff on its own training data — and reports the mean and
+  standard deviation of the test metrics across splits.
 
 ## Results
 
