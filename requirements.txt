@@ -1,0 +1,20 @@
+# R package requirements for finalproject_code_.R
+# R itself is not pip-installable; this file lists the CRAN packages the
+# script loads, in sessionInfo() style. Install them in R with:
+#
+#   install.packages(c("dplyr", "caret", "InformationValue", "gmodels",
+#                      "pROC", "class", "ggplot2", "highcharter",
+#                      "corrplot", "C50"))
+#
+# Record the exact versions used for a run with sessionInfo() in R.
+
+dplyr
+caret
+InformationValue
+gmodels
+pROC
+class
+ggplot2
+highcharter
+corrplot
+C50
